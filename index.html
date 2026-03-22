@@ -1,163 +1,145 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2575.7">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; -webkit-text-stroke: #000000; min-height: 14.0px}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Courier; -webkit-text-stroke: #000000}
-    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Courier; -webkit-text-stroke: #000000; min-height: 16.0px}
-    span.s1 {font-kerning: none}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Mermaid's Den</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f9f9;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-top: 8px solid #0077b6;
+        }
+        h1 {
+            color: #0077b6;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        h2 {
+            color: #0096c7;
+            border-bottom: 2px solid #caf0f8;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+        .property-info {
+            background-color: #eaf4f4;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        @media (max-width: 600px) {
+            .contact-grid { grid-template-columns: 1fr; }
+            .container { padding: 20px; }
+        }
+        .warning {
+            background-color: #fff4e5;
+            border-left: 5px solid #ffa500;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        .important {
+            font-weight: bold;
+            color: #d90429;
+        }
+        .btn {
+            display: inline-block;
+            background: #0077b6;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .footer {
+            text-align: center;
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 40px;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+    </style>
 </head>
 <body>
-<p class="p1"><span class="s1"></span><br></p>
-<p class="p2"><span class="s1">&lt;!DOCTYPE html&gt;</span></p>
-<p class="p2"><span class="s1">&lt;html lang="en"&gt;</span></p>
-<p class="p2"><span class="s1">&lt;head&gt;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span>&lt;title&gt;Welcome to Mermaid's Den&lt;/title&gt;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span>&lt;style&gt;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span>body {</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>line-height: 1.6;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>color: #333;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>background-color: #f4f9f9;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>margin: 0;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>padding: 20px;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span>.container {</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>max-width: 800px;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>margin: auto;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>background: #fff;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>padding: 40px;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>border-radius: 8px;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>box-shadow: 0 4px 15px rgba(0,0,0,0.1);</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>border-top: 8px solid #0077b6;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span>h1 {</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>color: #0077b6;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>text-align: center;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>margin-bottom: 10px;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span>h2 {</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>color: #0096c7;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>border-bottom: 2px solid #caf0f8;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>padding-bottom: 5px;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>margin-top: 30px;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span>.property-info {</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>background-color: #eaf4f4;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>padding: 20px;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>border-radius: 5px;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>margin: 20px 0;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span>.contact-grid {</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>display: grid;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>grid-template-columns: 1fr 1fr;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>gap: 20px;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span>@media (max-width: 600px) {</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>.contact-grid { grid-template-columns: 1fr; }</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>.container { padding: 20px; }</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span>.warning {</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>background-color: #fff4e5;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>border-left: 5px solid #ffa500;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>padding: 15px;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>margin: 15px 0;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span>.important {</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>font-weight: bold;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>color: #d90429;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span>.btn {</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>display: inline-block;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>background: #0077b6;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>color: white;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>padding: 12px 25px;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>text-decoration: none;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>border-radius: 5px;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>margin-top: 10px;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span>.footer {</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>text-align: center;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>font-size: 0.9em;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>color: #666;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>margin-top: 40px;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>border-top: 1px solid #eee;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>padding-top: 20px;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</span></p>
-<p class="p2"><span class="s1">&lt;/head&gt;</span></p>
-<p class="p2"><span class="s1">&lt;body&gt;</span></p>
-<p class="p3"><span class="s1"></span><br></p>
-<p class="p2"><span class="s1">&lt;div class="container"&gt;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span>&lt;h1&gt;🌊 Welcome Home!&lt;/h1&gt;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span>&lt;p style="text-align: center; font-size: 1.1em;"&gt;Your Outer Banks vacation has officially begun! If there's anything that we can help you with please don't hesitate to reach out.&lt;/p&gt;</span></p>
-<p class="p3"><span class="s1"></span><br></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="contact-grid"&gt;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div&gt;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>&lt;h3&gt;📞 Resort Realty Office&lt;/h3&gt;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>&lt;p&gt;&lt;strong&gt;Number:&lt;/strong&gt; (800) 458-3830&lt;br&gt;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>&lt;strong&gt;Email:&lt;/strong&gt; &lt;a href="mailto:info@resortrealty.com"&gt;info@resortrealty.com&lt;/a&gt;&lt;/p&gt;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div&gt;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>&lt;h3&gt;🛠️ Maintenance &amp; Linens&lt;/h3&gt;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>&lt;p&gt;&lt;strong&gt;Number:&lt;/strong&gt; (252) 261-8383&lt;br&gt;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>&lt;strong&gt;Email:&lt;/strong&gt; &lt;a href="mailto:maintenance@resortrealty.com"&gt;maintenance@resortrealty.com&lt;/a&gt;&lt;/p&gt;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span>&lt;p class="important" style="text-align: center;"&gt;🚨 After-Hours Emergency: (800) 350-1139&lt;/p&gt;</span></p>
-<p class="p3"><span class="s1"></span><br></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="property-info"&gt;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span>&lt;h3&gt;🏠 Property Details&lt;/h3&gt;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p&gt;&lt;strong&gt;Property #:&lt;/strong&gt; 5516 - Mermaid's Den&lt;br&gt;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span>&lt;strong&gt;Address:&lt;/strong&gt; 4813 S. Virginia Dare Trail&lt;br&gt;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span>&lt;strong&gt;City/State/Zip:&lt;/strong&gt; Nags Head, NC 27959&lt;/p&gt;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p&gt;&lt;strong&gt;🗑️ Trash Pick Up:&lt;/strong&gt;&lt;br&gt;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span>&lt;em&gt;May 1 – Oct 31:&lt;/em&gt; Cans moved for you on Sun/Wed (Pick up Mon/Thu).&lt;br&gt;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span>&lt;em&gt;Nov 1 – Apr 30:&lt;/em&gt; Please roll cans to the street on Sun/Wed (Pick up Mon/Thu).&lt;/p&gt;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
-<p class="p3"><span class="s1"></span><br></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span>&lt;h2&gt;🌐 Internet &amp; Connectivity&lt;/h2&gt;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span>&lt;p&gt;&lt;strong&gt;Password:&lt;/strong&gt; &lt;code&gt;svdt4813&lt;/code&gt;&lt;/p&gt;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span>&lt;p&gt;&lt;strong&gt;Troubleshooting:&lt;/strong&gt; Reset the modem/router by unplugging the power cord, wait 10 seconds, and plug back in. Ensure you are on the strongest signal and password is correct. If issues persist, please call the provider.&lt;/p&gt;</span></p>
-<p class="p3"><span class="s1"></span><br></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span>&lt;h2&gt;🏊 Pools + Hot Tubs&lt;/h2&gt;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span>&lt;p&gt;Serviced on check-in day; available &lt;strong&gt;after 4:00 p.m.&lt;/strong&gt; Mid-week chemical checks are standard. Please follow all posted rules.&lt;/p&gt;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span>&lt;ul&gt;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span>&lt;li&gt;Children must be supervised at all times.&lt;/li&gt;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span>&lt;li&gt;No pets allowed in the pool or hot tub.&lt;/li&gt;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/ul&gt;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="warning"&gt;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span>&lt;strong&gt;⚠️ No spray sunscreen near the pool.&lt;/strong&gt; It leaves residue, clogs filters, and damages the system. Apply away from the water and let dry first.</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
-<p class="p3"><span class="s1"></span><br></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span>&lt;h3&gt;🌡️ Pool Heat (If Applicable)&lt;/h3&gt;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span>&lt;p&gt;Heaters maintain 75-85°F. Please note that if ambient air drops below 55°F, heaters will not operate. Heat cannot be guaranteed due to environmental factors or mechanical failure.&lt;/p&gt;</span></p>
-<p class="p3"><span class="s1"></span><br></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span>&lt;h2&gt;❄️ Appliances &amp; AC&lt;/h2&gt;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span>&lt;p&gt;&lt;strong&gt;Refrigerators:&lt;/strong&gt; May take up to 48 hours to fully re-cool after being filled. Keep doors shut as much as possible. If still warm after 48 hours, contact maintenance.&lt;/p&gt;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span>&lt;p&gt;&lt;strong&gt;Air Conditioners:&lt;/strong&gt; To avoid freezing the system, keep windows and doors closed. Set the unit to &lt;strong&gt;AUTO/COOL at 70-75 degrees&lt;/strong&gt;. If the system freezes, it will blow warm air and must be turned off to thaw.&lt;/p&gt;</span></p>
-<p class="p3"><span class="s1"></span><br></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span>&lt;h2&gt;📋 Before You Leave&lt;/h2&gt;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span>&lt;p&gt;&lt;strong&gt;Accidental Damage:&lt;/strong&gt; Report immediately to the rental manager to expedite repairs for the next guest.&lt;/p&gt;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span>&lt;p&gt;&lt;strong&gt;Express Checkout:&lt;/strong&gt; For your convenience, use the &lt;strong&gt;Remote Check Out Button&lt;/strong&gt; on the Happy Stays app dashboard.&lt;/p&gt;</span></p>
-<p class="p3"><span class="s1"><span class="Apple-converted-space">    </span></span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span>&lt;a href="#" class="btn"&gt;Click here to Checkout via App&lt;/a&gt;</span></p>
-<p class="p3"><span class="s1"></span><br></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="footer"&gt;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span>&lt;h3&gt;📅 Pre-reserve for next year!&lt;/h3&gt;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p&gt;Respond to your arrival email, call (800) 458-3830, or email &lt;a href="mailto:info@resortrealty.com"&gt;info@resortrealty.com&lt;/a&gt;.&lt;/p&gt;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
-<p class="p2"><span class="s1">&lt;/div&gt;</span></p>
-<p class="p3"><span class="s1"></span><br></p>
-<p class="p2"><span class="s1">&lt;/body&gt;</span></p>
-<p class="p2"><span class="s1">&lt;/html&gt;</span></p>
+
+<div class="container">
+    <h1>🌊 Welcome Home!</h1>
+    <p style="text-align: center; font-size: 1.1em;">Your Outer Banks vacation has officially begun! If there's anything that we can help you with please don't hesitate to reach out.</p>
+
+    <div class="contact-grid">
+        <div>
+            <h3>📞 Resort Realty Office</h3>
+            <p><strong>Number:</strong> (800) 458-3830<br>
+            <strong>Email:</strong> <a href="mailto:info@resortrealty.com">info@resortrealty.com</a></p>
+        </div>
+        <div>
+            <h3>🛠️ Maintenance & Linens</h3>
+            <p><strong>Number:</strong> (252) 261-8383<br>
+            <strong>Email:</strong> <a href="mailto:maintenance@resortrealty.com">maintenance@resortrealty.com</a></p>
+        </div>
+    </div>
+    <p class="important" style="text-align: center;">🚨 After-Hours Emergency: (800) 350-1139</p>
+
+    <div class="property-info">
+        <h3>🏠 Property Details</h3>
+        <p><strong>Property #:</strong> 5516 - Mermaid's Den<br>
+        <strong>Address:</strong> 4813 S. Virginia Dare Trail<br>
+        <strong>City/State/Zip:</strong> Nags Head, NC 27959</p>
+        <p><strong>🗑️ Trash Pick Up:</strong><br>
+        <em>May 1 – Oct 31:</em> Cans moved for you on Sun/Wed (Pick up Mon/Thu).<br>
+        <em>Nov 1 – Apr 30:</em> Please roll cans to the street on Sun/Wed (Pick up Mon/Thu).</p>
+    </div>
+
+    <h2>🌐 Internet & Connectivity</h2>
+    <p><strong>Password:</strong> <code>svdt4813</code></p>
+    <p><strong>Troubleshooting:</strong> Reset the modem/router by unplugging the power cord, wait 10 seconds, and plug back in. Ensure you are on the strongest signal and password is correct. If issues persist, please call the provider.</p>
+
+    <h2>🏊 Pools + Hot Tubs</h2>
+    <p>Serviced on check-in day; available <strong>after 4:00 p.m.</strong> Mid-week chemical checks are standard. Please follow all posted rules.</p>
+    <ul>
+        <li>Children must be supervised at all times.</li>
+        <li>No pets allowed in the pool or hot tub.</li>
+    </ul>
+    <div class="warning">
+        <strong>⚠️ No spray sunscreen near the pool.</strong> It leaves residue, clogs filters, and damages the system. Apply away from the water and let dry first.
+    </div>
+
+    <h3>🌡️ Pool Heat (If Applicable)</h3>
+    <p>Heaters maintain 75-85°F. Please note that if ambient air drops below 55°F, heaters will not operate. Heat cannot be guaranteed due to environmental factors or mechanical failure.</p>
+
+    <h2>❄️ Appliances & AC</h2>
+    <p><strong>Refrigerators:</strong> May take up to 48 hours to fully re-cool after being filled. Keep doors shut as much as possible. If still warm after 48 hours, contact maintenance.</p>
+    <p><strong>Air Conditioners:</strong> To avoid freezing the system, keep windows and doors closed. Set the unit to <strong>AUTO/COOL at 70-75 degrees</strong>. If the system freezes, it will blow warm air and must be turned off to thaw.</p>
+
+    <h2>📋 Before You Leave</h2>
+    <p><strong>Accidental Damage:</strong> Report immediately to the rental manager to expedite repairs for the next guest.</p>
+    <p><strong>Express Checkout:</strong> For your convenience, use the <strong>Remote Check Out Button</strong> on the Happy Stays app dashboard.</p>
+    
+    <a href="#" class="btn">Click here to Checkout via App</a>
+
+    <div class="footer">
+        <h3>📅 Pre-reserve for next year!</h3>
+        <p>Respond to your arrival email, call (800) 458-3830, or email <a href="mailto:info@resortrealty.com">info@resortrealty.com</a>.</p>
+    </div>
+</div>
+
 </body>
 </html>
