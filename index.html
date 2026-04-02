@@ -1,187 +1,232 @@
-html_content = """
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guest Guide | Mermaid's Den</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <title>Welcome to Mermaid's Den - Guest Guide</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --ocean-blue: #0077b6;
-            --soft-teal: #00b4d8;
-            --sand: #f4f1de;
-            --warning-orange: #ff9f1c;
-            --emergency-red: #e63946;
-            --text-main: #2b2d42;
-            --bg-light: #f8f9fa;
+            --primary-blue: #0077b6;
+            --secondary-teal: #00b4d8;
+            --accent-sand: #f4f1de;
+            --text-dark: #333;
+            --white: #ffffff;
+            --emergency-red: #d90429;
         }
 
         body {
             font-family: 'Open Sans', sans-serif;
-            background-color: var(--bg-light);
-            color: var(--text-main);
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: #f0f4f8;
             margin: 0;
             padding: 0;
         }
 
         header {
-            background: linear-gradient(rgba(0,119,182,0.8), rgba(0,180,216,0.8)), url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            padding: 60px 20px;
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-teal));
+            color: var(--white);
+            padding: 40px 20px;
             text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
 
-        .container { max-width: 850px; margin: -30px auto 40px; padding: 0 15px; }
+        header h1 {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+        }
 
         .card {
-            background: white;
-            border-radius: 15px;
-            padding: 30px;
-            margin-bottom: 25px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            background: var(--white);
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            border-left: 5px solid var(--secondary-teal);
         }
 
-        h1 { font-family: 'Montserrat', sans-serif; font-size: 2.5rem; margin: 0; }
-        h2 { font-family: 'Montserrat', sans-serif; color: var(--ocean-blue); border-bottom: 2px solid var(--sand); padding-bottom: 10px; margin-top: 0; }
-        h3 { font-size: 1.1rem; color: var(--soft-teal); margin-bottom: 10px; }
+        .card h2 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary-blue);
+            margin-top: 0;
+            border-bottom: 2px solid var(--accent-sand);
+            padding-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
 
-        .wifi-section {
-            background: #e9f5f9;
-            border: 2px solid var(--soft-teal);
-            text-align: center;
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .contact-item {
+            padding: 10px;
+            background: var(--accent-sand);
+            border-radius: 8px;
+        }
+
+        .emergency {
+            border-left-color: var(--emergency-red);
+            background-color: #fff5f5;
+        }
+
+        .emergency h2 {
+            color: var(--emergency-red);
+        }
+
+        .wifi-box {
+            background: #e0f2f1;
             padding: 20px;
-            border-radius: 10px;
-        }
-
-        .wifi-creds { font-size: 1.4rem; font-weight: 800; color: var(--ocean-blue); letter-spacing: 1px; }
-
-        .step-list { list-style: none; padding: 0; }
-        .step-list li { margin-bottom: 15px; padding-left: 35px; position: relative; }
-        .step-list li::before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            background: var(--soft-teal);
-            color: white;
-            width: 22px;
-            height: 22px;
-            border-radius: 50%;
+            border-radius: 8px;
             text-align: center;
-            line-height: 22px;
-            font-size: 12px;
+            border: 2px dashed var(--primary-blue);
         }
 
-        .alert-box {
-            background: #fff3cd;
-            border-left: 5px solid var(--warning-orange);
-            padding: 15px;
-            margin: 15px 0;
-            font-size: 0.95rem;
+        .wifi-box code {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--primary-blue);
         }
 
-        .contact-pill {
+        .highlight {
+            font-weight: bold;
+            color: var(--primary-blue);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 40px;
+            font-size: 0.9rem;
+            color: #777;
+        }
+
+        .btn {
             display: inline-block;
-            background: var(--sand);
-            padding: 8px 15px;
-            border-radius: 20px;
-            margin: 5px;
-            font-weight: 600;
-        }
-
-        .btn-check-out {
-            display: block;
-            width: 100%;
-            background: var(--ocean-blue);
+            padding: 12px 25px;
+            background-color: var(--primary-blue);
             color: white;
-            text-align: center;
-            padding: 15px;
-            border-radius: 10px;
             text-decoration: none;
-            font-weight: 800;
-            margin-top: 20px;
+            border-radius: 30px;
+            font-weight: bold;
+            margin-top: 10px;
+            transition: background 0.3s;
         }
 
-        .btn-check-out:hover { background: var(--text-main); }
+        .btn:hover {
+            background-color: var(--secondary-teal);
+        }
+
+        @media (max-width: 600px) {
+            header h1 { font-size: 1.8rem; }
+            .container { padding: 10px; }
+        }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Welcome to Mermaid's Den</h1>
-    <p>Property #5516 | Nags Head, NC</p>
+    <h1>Welcome Home!</h1>
+    <p>Your Outer Banks vacation at <strong>Mermaid's Den</strong> has officially begun.</p>
 </header>
 
 <div class="container">
 
+    <!-- Contact Section -->
     <div class="card">
-        <h2>📶 Wi-Fi & Internet</h2>
-        <div class="wifi-section">
-            <p>Network Name: <span class="wifi-creds">mermaid</span></p>
-            <p>Password: <span class="wifi-creds">svdt4813</span></p>
+        <h2>Contact Information</h2>
+        <div class="contact-grid">
+            <div class="contact-item">
+                <strong>Resort Realty Office:</strong><br>
+                (800) 458-3830<br>
+                info@resortrealty.com
+            </div>
+            <div class="contact-item">
+                <strong>Housekeeping & Maintenance:</strong><br>
+                (252) 261-8383<br>
+                maintenance@resortrealty.com
+            </div>
         </div>
-        <h3>Wi-Fi Troubleshooting</h3>
-        <p>If the internet is slow or disconnected, please follow these <strong>3 steps</strong>:</p>
-        <ul class="step-list">
-            <li>Open the <strong>1st floor TV cabinet</strong> (2nd door from right).</li>
-            <li>Find the power strip and flip the <strong>RED switch to OFF</strong>.</li>
-            <li>Wait <strong>30 seconds</strong>, then flip it back ON.</li>
-        </ul>
-    </div>
-
-    <div class="card">
-        <h2>📺 How to use the TVs</h2>
-        <h3>Streaming (Main Floor & 1st Level)</h3>
-        <p>Use the <strong>Black Remote</strong> to access Netflix, Disney+, etc. Please remember to sign out before you leave!</p>
-        
-        <h3>Watching Cable TV</h3>
-        <ol class="step-list">
-            <li>Turn on the Cable Box using the <strong>Silver Remote</strong>. (Box is in the center TV cabinet).</li>
-            <li>Use the <strong>Black Remote</strong> to hit "Home" and select the input:
-                <ul>
-                    <li>Main Floor: <strong>HDMI 1</strong></li>
-                    <li>1st Level: <strong>HDMI 2</strong></li>
-                </ul>
-            </li>
-            <li>Use the <strong>Silver Remote</strong> to change channels.</li>
-        </ol>
-
-        <h3>Bedroom TVs</h3>
-        <p>Simply open the <strong>Spectrum App</strong> using the TV remote to watch cable channels.</p>
-    </div>
-
-    <div class="card">
-        <h2>🌡️ AC & Comfort</h2>
-        <div class="alert-box">
-            <strong>ENERGY SAVER:</strong> Please keep all windows and doors closed while AC is running. 
-            Set the thermostat to <strong>65°F</strong> when you depart.
+        <div class="contact-item emergency" style="margin-top: 15px;">
+            <strong>After-Hours Emergency:</strong> (800) 350-1139
         </div>
-        <p><strong>Refrigerators:</strong> Avoid leaving the door open for long periods; it can take 48 hours to fully cool back down after check-in.</p>
-        <p><strong>Vacuum Cleaners:</strong> Located in the laundry or bedroom closets for your convenience.</p>
     </div>
 
+    <!-- Property Info -->
     <div class="card">
-        <h2>🏊 Pool & Hot Tub</h2>
-        <p>Service day is check-in day (ready after 4:00 PM).</p>
-        <div class="alert-box" style="border-left-color: var(--emergency-red);">
-            <strong>NO SPRAY SUNSCREEN:</strong> Please apply spray sunscreen away from the pool area. It clogs the filters and damages the liner.
+        <h2>Property Details</h2>
+        <p><strong>Property #:</strong> 5516 - Mermaid's Den</p>
+        <p><strong>Address:</strong> 4813 S. Virginia Dare Trail, Nags Head, NC 27959</p>
+        <p><strong>Trash Pick Up:</strong> 
+            May 1 – Oct 31: Sundays & Wednesdays (Curbside provided).<br>
+            Nov 1 – April 30: Please roll cans to the street on Sundays & Wednesdays.
+        </p>
+    </div>
+
+    <!-- Internet -->
+    <div class="card">
+        <h2>Internet & Wi-Fi</h2>
+        <div class="wifi-box">
+            <p><strong>SSID:</strong> <code>mermaid</code></p>
+            <p><strong>Password:</strong> <code>svdt4813</code></p>
         </div>
-        <p><strong>Pool Heat:</strong> Will not operate if the outside air temperature drops below 55°F.</p>
+        <h3>Troubleshooting</h3>
+        <p>If you have issues, go to the 1st floor TV cabinet (2nd door from right). Flip the <strong>RED</strong> switch on the power strip OFF, wait 30 seconds, then flip it back ON. Our provider is Spectrum.</p>
     </div>
 
+    <!-- Entertainment -->
     <div class="card">
-        <h2>📞 Support & Contacts</h2>
-        <div class="contact-pill">Resort Realty: (800) 458-3830</div>
-        <div class="contact-pill">Maintenance: (252) 261-8383</div>
-        <div class="contact-pill" style="color: var(--emergency-red);">Emergency After-Hours: (800) 350-1139</div>
-        
-        <a href="#" class="btn-check-out">CLICK HERE FOR EXPRESS CHECKOUT</a>
+        <h2>Television & Entertainment</h2>
+        <p><span class="highlight">Main Floor & 1st Level:</span> Use the <strong>Black Remote</strong> for Smart TV apps (Netflix/Disney+). Please remember to sign out before leaving.</p>
+        <p><span class="highlight">Cable TV:</span> Power on the box using the <strong>Silver Remote</strong> (located in the center cabinet). Use the Black remote to select <strong>HDMI 1</strong> (Main Floor) or <strong>HDMI 2</strong> (1st Level), then use the Silver remote to change channels.</p>
+        <p><span class="highlight">Bedroom TVs:</span> Simply open the <strong>Spectrum App</strong> installed on the TV.</p>
+        <hr>
+        <h3>Bluetooth Speaker</h3>
+        <p>Find the sliding switch on the side of the speaker and select <strong>BA-02</strong> on your phone. Please keep the speaker indoors.</p>
+    </div>
+
+    <!-- Appliances & Climate -->
+    <div class="card">
+        <h2>Home Comfort</h2>
+        <h3>Air Conditioning</h3>
+        <p>Please keep windows and doors closed while the AC is running. To prevent the system from freezing, set the unit to <strong>AUTO/COOL between 70-75 degrees</strong>. When checking out, please set it to <strong>65°F</strong>.</p>
+        <h3>Refrigerators</h3>
+        <p>It can take up to 48 hours to fully cool after being emptied. Keep the doors closed as much as possible to help it reach temperature.</p>
+        <h3>Vacuum Cleaners</h3>
+        <p>Found in laundry or bedroom closets.</p>
+    </div>
+
+    <!-- Pool & Hot Tub -->
+    <div class="card">
+        <h2>Pools & Hot Tubs</h2>
+        <p>Available after 4:00 p.m. on check-in day. <strong>No spray sunscreen near the pool</strong> as it damages the filters. No pets in the pool or hot tub. Children must be supervised at all times.</p>
+        <p><em>Note: Pool heaters require ambient air above 55°F to operate and cannot be guaranteed during extreme cold.</em></p>
+    </div>
+
+    <!-- Checkout -->
+    <div class="card" style="border-left-color: var(--primary-blue);">
+        <h2>Before You Leave...</h2>
+        <p>Please report any damages immediately so we can fix them for the next guest. You can check out quickly via the app below:</p>
+        <a href="#" class="btn">Express Checkout</a>
+        <p style="margin-top: 20px;"><strong>Want to come back next year?</strong> Pre-reserve by emailing info@resortrealty.com!</p>
+    </div>
+
+    <div class="footer">
+        &copy; 2024 Mermaid's Den | Managed by Resort Realty
     </div>
 
 </div>
 
 </body>
 </html>
-"""
