@@ -1,139 +1,106 @@
-Here is a complete index.html file designed for a high-end vacation rental. I have used a Coastal/Maritime color scheme (Deep Navy, Seaglass Teal, and Sand) with a clean, responsive layout that looks great on mobile devices and tablets.
-
-HTML
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guest Guide | Mermaid's Den</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <title>Welcome to Mermaid's Den</title>
     <style>
         :root {
-            --navy: #003049;
-            --teal: #0081a7;
-            --seaglass: #00afb9;
-            --sand: #fdf0d5;
-            --coral: #f07167;
+            --primary-navy: #1a3a5f;
+            --accent-teal: #4a90e2;
+            --sand-bg: #f9f7f2;
             --white: #ffffff;
-            --text: #333333;
+            --text-dark: #333333;
+            --border-color: #d1d9e0;
+            --emergency-red: #b22222;
         }
 
         body {
-            font-family: 'Open Sans', sans-serif;
-            background-color: #f8f9fa;
-            color: var(--text);
-            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--sand-bg);
+            margin: 0;
+            padding: 0;
         }
 
         header {
-            background-color: var(--navy);
-            background-image: linear-gradient(135deg, var(--navy) 0%, var(--teal) 100%);
+            background-color: var(--primary-navy);
             color: var(--white);
-            padding: 60px 20px;
+            padding: 2rem 1rem;
             text-align: center;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-
-        h1 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 2.5rem;
-            margin: 0;
-            letter-spacing: 1px;
+            border-bottom: 5px solid var(--accent-teal);
         }
 
         .container {
-            max-width: 900px;
-            margin: -40px auto 40px;
-            padding: 0 20px;
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
         }
 
-        section {
+        .welcome-msg {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            color: var(--primary-navy);
+            font-weight: 500;
+        }
+
+        .card {
             background: var(--white);
-            border-radius: 12px;
-            padding: 30px;
-            margin-bottom: 25px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            border-top: 5px solid var(--seaglass);
-        }
-
-        h2 {
-            font-family: 'Montserrat', sans-serif;
-            color: var(--navy);
-            border-bottom: 2px solid var(--sand);
-            padding-bottom: 10px;
-            margin-top: 0;
-            font-size: 1.5rem;
-            text-transform: uppercase;
-        }
-
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            border-left: 5px solid var(--accent-teal);
         }
 
         .contact-card {
-            background: var(--sand);
-            padding: 15px;
-            border-radius: 8px;
-            font-size: 0.95rem;
+            border-left: 5px solid var(--primary-navy);
         }
 
         .emergency {
-            background-color: #ffe5e5;
-            border-left: 4px solid var(--coral);
+            color: var(--emergency-red);
+            font-weight: bold;
+        }
+
+        h1, h2, h3 {
+            margin-top: 0;
+            color: var(--primary-navy);
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
         }
 
         .wifi-box {
-            background: #e0f2f1;
-            padding: 20px;
-            border-radius: 8px;
-            text-align: center;
-            border: 2px dashed var(--teal);
-            margin: 15px 0;
-        }
-
-        .wifi-box strong {
-            color: var(--navy);
-            font-size: 1.1rem;
-        }
-
-        .alert {
-            background-color: #fff3cd;
-            border-left: 4px solid #ffc107;
-            padding: 15px;
-            margin: 15px 0;
-            font-size: 0.9rem;
-            font-style: italic;
-        }
-
-        .btn {
-            display: inline-block;
-            background-color: var(--teal);
-            color: white;
-            padding: 12px 25px;
-            text-decoration: none;
+            background: #eef6ff;
+            padding: 1rem;
             border-radius: 5px;
-            font-weight: bold;
-            transition: background 0.3s ease;
+            border: 1px dashed var(--accent-teal);
         }
 
-        .btn:hover {
-            background-color: var(--navy);
+        .warning-box {
+            background: #fff4f4;
+            border: 1px solid #f5c6cb;
+            padding: 1rem;
+            border-radius: 5px;
+            margin-top: 10px;
         }
 
-        .footer {
+        footer {
             text-align: center;
-            padding: 40px;
-            color: #777;
+            padding: 2rem;
             font-size: 0.9rem;
+            color: #666;
         }
 
         @media (max-width: 600px) {
-            h1 { font-size: 1.8rem; }
-            section { padding: 20px; }
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -141,101 +108,90 @@ HTML
 
 <header>
     <h1>Welcome Home!</h1>
-    <p>Your Outer Banks vacation has officially begun.</p>
+    <p>Property #: 5516 - Mermaid's Den</p>
 </header>
 
 <div class="container">
+    <p class="welcome-msg">
+        Your Outer Banks vacation has officially begun! If there's anything that we can help you with please don't hesitate to reach out.
+    </p>
 
-    <section>
-        <h2>Contact & Property Info</h2>
-        <p><strong>Property #:</strong> 5516 - Mermaid's Den</p>
-        <p><strong>Address:</strong> 4813 S. Virginia Dare Trail, Nags Head, NC 27959</p>
-        
-        <div class="contact-grid">
-            <div class="contact-card">
-                <strong>Resort Realty Office</strong><br>
-                (800) 458-3830<br>
-                info@resortrealty.com
-            </div>
-            <div class="contact-card">
-                <strong>Maintenance & Linens</strong><br>
-                (252) 261-8383<br>
-                maintenance@resortrealty.com
-            </div>
-            <div class="contact-card emergency">
-                <strong>After-Hours Emergency</strong><br>
-                (800) 350-1139
-            </div>
-        </div>
-    </section>
+    <!-- Contact Info -->
+    <div class="card contact-card">
+        <h3>Contact & Location</h3>
+        <p><strong>Address:</strong> 4813 S. Virginia Dare Trail, Nags Head, Nc 27959</p>
+        <p><strong>Resort Realty Office:</strong> (800) 458-3830<br>
+        <small>info@resortrealty.com</small></p>
+        <p><strong>Housekeeping & Maintenance:</strong> (252) 261-8383<br>
+        <small>maintenance@resortrealty.com</small></p>
+        <p class="emergency">After-Hours Emergency: (800) 350-1139</p>
+    </div>
 
-    <section>
-        <h2>Internet & Wi-Fi</h2>
+    <!-- Trash Info -->
+    <div class="card">
+        <h3>Trash Pick Up Info</h3>
+        <p><strong>May 1st to October 31st:</strong> Cans moved to street for you on Sundays and Wednesdays (Pick up Mondays/Thursdays).</p>
+        <p><strong>November 1 to April 30:</strong> You will need to roll cans to street on Sundays and Wednesdays (Pick up Mondays/Thursdays).</p>
+    </div>
+
+    <!-- Internet -->
+    <div class="card">
+        <h3>Internet</h3>
         <div class="wifi-box">
-            <strong>SSID:</strong> mermaid <br>
-            <strong>Password:</strong> svdt4813
+            <p><strong>SSID:</strong> mermaid</p>
+            <p><strong>Password:</strong> svdt4813</p>
         </div>
-        <h3>Troubleshooting</h3>
-        <p>If you experience issues, a quick restart usually works:
-            <ol>
-                <li>Head to the 1st floor TV cabinet, open the 2nd door from the right.</li>
-                <li>Flip the <strong>RED</strong> light switch on the power strip to OFF.</li>
-                <li>Wait 30 seconds, then flip it back to ON. Give it a few minutes to reboot.</li>
-            </ol>
-            Provider: <em>Spectrum</em>
-        </p>
-    </section>
+        <h4>Troubleshooting</h4>
+        <p>If you experience any issues with the Wi-Fi or connection, a quick restart usually does the trick. To do this, head to the 1st floor TV cabinet and open the second door from the right. Inside, you will find a power extension cord with a RED light switch. Flip this switch to the OFF position (the red light will go out) and wait for at least 30 seconds before flipping it back to ON. Give the system a few minutes to reboot; if you are still having trouble after the restart, please let us know. Our internet provider is Spectrum, and we are happy to help coordinate further support if needed.</p>
+    </div>
 
-    <section>
-        <h2>Entertainment</h2>
+    <!-- Entertainment -->
+    <div class="card">
         <h3>How to Use the TVs</h3>
-        <p>Large screens are located on the Main Floor and 1st Level. Use the <strong>black remote</strong> for Smart TV apps. Please sign out of personal accounts before check-out.</p>
-        <p><strong>Cable TV:</strong> Power on the cable box (center TV cabinet) with the <strong>silver remote</strong>. Use the black remote to select <strong>HDMI 1</strong> (Main Floor) or <strong>HDMI 2</strong> (1st Level). Control channels with the silver remote.</p>
-        <p><strong>Bedroom TVs:</strong> Open the <strong>Spectrum app</strong> installed on the TV for instant cable access.</p>
+        <p>We have two large screens located on the Main Floor and the 1st Level. Both are Smart TVs; please remember to sign out of your streaming accounts before you check out!</p>
+        <p><strong>Main & 1st Level:</strong> Power on the cable box using the silver remote (inside center double doors of the TV cabinet). Use the black remote Home button to select inputs: <strong>HDMI 1</strong> (Main Floor) or <strong>HDMI 2</strong> (1st Level). Use the silver remote for channels.</p>
+        <p><strong>Bedroom TVs:</strong> Simply use the TV remote to navigate to the <strong>Spectrum app</strong> already installed on the screen.</p>
         
         <h3>Bluetooth Speaker</h3>
-        <p>Find the sliding switch on the side to turn on Bluetooth. Pair your phone with <strong>BA-02</strong>. Please keep the speaker indoors at all times.</p>
-    </section>
+        <p>We provide a battery-operated Bluetooth speaker; however, we kindly ask that you <strong>do not take the speaker outdoors</strong>. Slide the switch to "On" and pair your phone to <strong>BA-02</strong>.</p>
+    </div>
 
-    <section>
-        <h2>Home Care</h2>
-        <h3>Air Conditioning</h3>
-        <p>Controls are on each floor. Please keep windows/doors closed when AC is on. To prevent system freeze-ups, set to <strong>AUTO/COOL at 70-75 degrees</strong>. When departing, please set to 65.</p>
-        
-        <h3>Refrigerators</h3>
-        <p>May take up to 48 hours to re-cool after filling with groceries. Keep doors closed as much as possible!</p>
-        
-        <h3>Vacuum Cleaners</h3>
-        <p>Found in laundry closets or bedroom closets.</p>
-    </section>
-
-    <section>
-        <h2>Pools & Hot Tubs</h2>
-        <p>Pools/tubs are ready after 4:00 p.m. on check-in day. Vendors perform mid-week chemical checks.</p>
-        <div class="alert">
-            <strong>Strict Rule:</strong> No spray sunscreen near the pool. It clogs filters and damages the surface. Apply away from the water and let dry first.
+    <!-- Amenities -->
+    <div class="card">
+        <h3>Pools + Hot Tubs</h3>
+        <p>Pools and hot tubs are serviced on check-in day and are available after 4:00 p.m. Vendor visits mid-week for chemical checks. No pets in pool/hot tub. Children must be supervised.</p>
+        <div class="warning-box">
+            <strong>No spray sunscreen near the pool.</strong> It leaves residue, clogs filters, and can damage the pool. Apply away from the water and let it dry first.
         </div>
-        <p><em>Pool Heat:</em> Operates when ambient air is above 55°F. If overnight temps drop below 50°F, heat cannot be guaranteed.</p>
-    </section>
+        <h4>Pool Heat (If Applicable)</h4>
+        <p>Operating temperature is 75-85°F. Heaters will not operate if the outside air is below 55°F. Pool heat cannot be guaranteed due to environmental factors or mechanical failure.</p>
+    </div>
 
-    <section style="border-top-color: var(--coral);">
-        <h2>Before You Leave</h2>
-        <p><strong>Trash:</strong> Place cans at the street the evening before pick-up (facing the street). 
-            <ul>
-                <li>May 1 - Oct 31: Sundays & Wednesdays (for Mon/Thu pickup)</li>
-                <li>Nov 1 - Apr 30: Guest must roll to street</li>
-            </ul>
-        </p>
-        <p><strong>Damages:</strong> Report accidental damage immediately to the office to expedite repairs.</p>
-        <p><strong>Checkout:</strong> Use the Remote Check Out Button on the Happy Stays app.</p>
-        <a href="mailto:info@resortrealty.com" class="btn">Pre-reserve for next year!</a>
-    </section>
+    <!-- Household Info -->
+    <div class="card">
+        <h3>Appliances & AC</h3>
+        <p><strong>Refrigerators:</strong> May take up to 48 hours to fully cool after being filled. Keep doors shut as much as possible.</p>
+        <p><strong>Air Conditioners:</strong> Controls are on each floor. Please keep windows/doors closed while AC is running. Do not set below 70 degrees on hot days to avoid freezing the system.</p>
+        <p><strong>Vacuum Cleaners:</strong> Located in laundry closets or bedroom closets.</p>
+    </div>
 
-    <div class="footer">
-        Property #5516 - Mermaid's Den | Resort Realty OBX
+    <!-- Legal & Checkout -->
+    <div class="card">
+        <h3>Damages & Trash</h3>
+        <p>Report accidental damage immediately to the rental manager to expedite repairs for the next guest. Ensure trash lids face the street the evening before pick-up.</p>
+        
+        <h3>Express Checkout</h3>
+        <p>Check out through the app by clicking the <strong>Remote Check Out Button</strong> on the app's dashboard.</p>
+        
+        <h3>Pre-reserve for next year!</h3>
+        <p>Respond to your arrival email, call (800) 458-3830, or email info@resortrealty.com to book your stay for next season.</p>
     </div>
 
 </div>
+
+<footer>
+    &copy; 2026 Resort Realty - Mermaid's Den
+</footer>
 
 </body>
 </html>
